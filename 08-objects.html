@@ -1,0 +1,102 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+<!--Contains information about the page.-->
+
+<head>
+  <!--An object groups multiple values together.-->
+  <title>Objects</title>
+</head>
+
+<body>
+  <!-- Runs JavaScript code.-->
+  <script>
+    /* 1. Objects = group related values together.
+      2. Added a score to Rock Paper Scissors.
+      3. Built-in objects (JSON, localStorage).*/
+
+    /*const product = {
+      name: "t-shirt",
+      price: 200
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);*/
+
+    /*
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function2() {
+        console.log('Function inside object');
+      }
+    };
+    // Object + function = method 
+    console.log(product2);
+    console.log(product2.name); // dot notation
+    console.log(product2['name']); // bracket notation
+    console.log(product2['delivery-time']);
+
+    console.log(product2.rating.stars);
+    console.log(product2.rating.count);
+    product2.fun();
+    console.log(typeof console);
+
+    console.log(JSON.stringify(product2)); // converts object into Jason
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString)); // converts jason to object
+    */
+
+    console.log('Hello World'.length);
+    console.log('Hello world'.toUpperCase());
+
+    const object1 = {
+      message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'Good job';
+    console.log(object1);
+
+    const object3 = {
+      message: 'Good job'
+    };
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+
+    const object4 = {
+      message: 'Good job'
+    };
+    // const message = object4.message;
+    const { message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+      message,
+      method: function function1() {
+        console.log('method');
+      }
+    };
+    console.log(object5);
+    console.log();
+  </script>
+</body>
+
+</html>

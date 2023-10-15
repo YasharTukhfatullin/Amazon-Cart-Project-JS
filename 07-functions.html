@@ -1,0 +1,33 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+  <!--Contains information about the page.-->
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <!-- Runs JavaScript code.-->
+    <script>
+      /*
+      // function help us to reuse the code.
+      function function1() {
+        console.log("hi");
+        console.log(2 + 2);
+      }
+      function1(); //calling a function
+      */
+
+      // Return = gets a value out of a function.
+      // Parameter = puts a value into a function.
+
+      function calculateTax(cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+
+      calculateTax(2000, 0.2);
+      calculateTax(100, 0.02);
+      calculateTax(5000);
+    </script>
+  </body>
+</html>

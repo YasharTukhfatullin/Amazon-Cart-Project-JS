@@ -1,0 +1,53 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+<!--Contains information about the page.-->
+
+<head>
+    <title>Rock Paper Scissors</title>
+
+    <!-- rel = relation, href = which file to load-->
+    <link rel="stylesheet" href="styles/12-rock-paper-scissors-advanced.css" />
+</head>
+
+<body>
+    <p class="css-title">Rock Paper Scissors</p>
+
+    <button onclick="playGame('Rock');" class="css-move-button">
+        <img src="images/rock-emoji.png" class="move-icon" />
+    </button>
+
+    <button onclick="playGame('Paper');" class="css-move-button">
+        <img src="images/paper-emoji.png" class="move-icon" />
+    </button>
+
+    <button onclick="playGame('Scissors');" class="css-move-button">
+        <img src="images/scissors-emoji.png" class="move-icon" />
+    </button>
+
+    <p class="js-result" class="css-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score css-score"></p>
+
+    <button onclick="
+        score.wins = 0; 
+        score.losses = 0; 
+        score.tie = 0; 
+        localStorage.removeItem('score'); 
+        updateScoreElement();
+    " class="css-reset-score-button">
+        Reset Score
+    </button>
+
+    <button class="auto-play-button" onclick="
+        autoPlay();
+    ">
+        Auto Play
+    </button>
+
+    <!-- Runs JavaScript code.-->
+    <script src="scripts/12-rock-paper-scissors-advanced.js"></script>
+</body>
+
+</html>

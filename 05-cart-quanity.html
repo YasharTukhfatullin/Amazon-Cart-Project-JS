@@ -1,0 +1,38 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+<!--Contains information about the page.-->
+
+<head>
+  <title>Cart Quantity</title>
+</head>
+
+<body>
+  <!--${cartQuanity} interpolation-->
+  <button onclick="console.log(`Cart Quantity: ${cartQuanity}`);">
+    Show Quantity
+  </button>
+
+  <button onclick="cartQuanity += 1; console.log(`Cart Quantity: ${cartQuanity}`);">
+    Add to Cart
+  </button>
+
+  <button onclick="cartQuanity += 2; console.log(`Cart Quantity: ${cartQuanity}`);">
+    +2
+  </button>
+
+  <button onclick="cartQuanity += 3; console.log(`Cart Quantity: ${cartQuanity}`);">
+    +3
+  </button>
+  <button onclick="cartQuanity = 0; console.log('Cart was reset.'); console.log(`Cart Quantity: ${cartQuanity}`); ">
+    Reset Cart
+  </button>
+
+  <!-- Runs JavaScript code.-->
+  <script>
+    let cartQuanity = 0;
+  </script>
+</body>
+
+</html>

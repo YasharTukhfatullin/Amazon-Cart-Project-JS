@@ -1,0 +1,119 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+<!--Contains information about the page.-->
+
+<head>
+    <!--An object groups multiple values together.-->
+    <title>Advanced Functions Project</title>
+</head>
+
+<body>
+    <!-- Runs JavaScript code.-->
+    <script>
+        /*
+        //Functions are Values.
+        // Normal Function (Hoisting)
+        function greeting () {
+            console.log('Hello');
+        };
+        greeting();
+
+        const num = 2;
+        // Anonymous Function
+        const function1 = function () {
+            console.log('Hello 2');
+        };
+
+        console.log(function1);
+        console.log(typeof(function1));
+        function1();
+
+        const object1 = {
+            num: 2,
+            fun: function() {
+                console.log('hello3');
+            }
+        };
+        object1.fun();
+
+        function display(param) {
+            console.log(param);
+        }
+        display(2);
+
+        function run(param) {
+            param();
+        };
+
+        run(function() {
+            console.log('hello4');
+        });
+        */
+
+        /*
+        setTimeout(function() {
+            console.log('timeout1');
+            console.log('timeout2');
+        }, 3000);
+
+        console.log('next line');
+
+        setInterval(function() {
+            console.log('interval')
+        }, 3000);
+
+        console.log('next line 2');
+        */
+
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value, index) {
+            if (value === 'wash dishes') {
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
+
+        // Arrow function 
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach((value, index) => {
+            if (value === 'wash dishes') {
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
+
+        // Regular Function
+        const regularFunction = function(param, param2) {
+            console.log('regular hello')
+            return 5;
+        };
+
+        // Arrow Function
+        const arrowFunction = (param, param2) => {
+            console.log('arrow hello');
+            return 5;
+        };
+        arrowFunction();
+
+        const oneParam = param => {
+            console.log(param + 1);
+        };
+        oneParam(2);
+
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+
+    </script>
+</body>
+
+</html>

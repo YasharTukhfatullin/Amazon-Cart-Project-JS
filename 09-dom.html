@@ -1,0 +1,37 @@
+<!--Tells browser use modern version of the HTML.-->
+<!DOCTYPE html>
+<!--Represents the entire webpage.-->
+<html>
+<!--Contains information about the page.-->
+
+<head>
+    <!--An object groups multiple values together.-->
+    <title>DOM</title>
+</head>
+
+<body>
+    <button>hello</button>
+    <button class="js-button">Second Button</button>
+    <!-- Runs JavaScript code.-->
+    <script>
+        console.log(document.querySelector('button').innerHTML = 'Changed');
+        console.log(document.querySelector('.js-button').innerHTML = 'Changed');
+
+        /*
+        console.log(document.timeline);
+        document.title = 'Changed';
+        console.log(document.body);
+        
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good Job</button>';
+        */
+
+        /*Document Object Model.*/
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'Good job';
+        */
+    </script>
+</body>
+
+</html>
