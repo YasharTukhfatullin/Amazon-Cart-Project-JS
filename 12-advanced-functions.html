@@ -5,115 +5,135 @@
 <!--Contains information about the page.-->
 
 <head>
-    <!--An object groups multiple values together.-->
-    <title>Advanced Functions Project</title>
+  <!--An object groups multiple values together.-->
+  <title>Advanced Functions Project</title>
 </head>
 
 <body>
-    <!-- Runs JavaScript code.-->
-    <script>
-        /*
-        //Functions are Values.
-        // Normal Function (Hoisting)
-        function greeting () {
-            console.log('Hello');
-        };
-        greeting();
+  <!-- Runs JavaScript code.-->
+  <script>
+    /*
+    //Functions are Values.
+    // Normal Function (Hoisting)
+    function greeting () {
+        console.log('Hello');
+    };
+    greeting();
 
-        const num = 2;
-        // Anonymous Function
-        const function1 = function () {
-            console.log('Hello 2');
-        };
+    const num = 2;
+    // Anonymous Function
+    const function1 = function () {
+        console.log('Hello 2');
+    };
 
-        console.log(function1);
-        console.log(typeof(function1));
-        function1();
+    console.log(function1);
+    console.log(typeof(function1));
+    function1();
 
-        const object1 = {
-            num: 2,
-            fun: function() {
-                console.log('hello3');
-            }
-        };
-        object1.fun();
-
-        function display(param) {
-            console.log(param);
+    const object1 = {
+        num: 2,
+        fun: function() {
+            console.log('hello3');
         }
-        display(2);
+    };
+    object1.fun();
 
-        function run(param) {
-            param();
-        };
+    function display(param) {
+        console.log(param);
+    }
+    display(2);
 
-        run(function() {
-            console.log('hello4');
-        });
-        */
+    function run(param) {
+        param();
+    };
 
-        /*
-        setTimeout(function() {
-            console.log('timeout1');
-            console.log('timeout2');
-        }, 3000);
+    run(function() {
+        console.log('hello4');
+    });
+    */
 
-        console.log('next line');
+    /*
+    setTimeout(function() {
+        console.log('timeout1');
+        console.log('timeout2');
+    }, 3000);
 
-        setInterval(function() {
-            console.log('interval')
-        }, 3000);
+    console.log('next line');
 
-        console.log('next line 2');
-        */
+    setInterval(function() {
+        console.log('interval')
+    }, 3000);
 
-        [
-            'make dinner',
-            'wash dishes',
-            'watch youtube'
-        ].forEach(function(value, index) {
-            if (value === 'wash dishes') {
-                return;
-            }
-            console.log(index);
-            console.log(value);
-        });
+    console.log('next line 2');
+    */
 
-        // Arrow function 
-        [
-            'make dinner',
-            'wash dishes',
-            'watch youtube'
-        ].forEach((value, index) => {
-            if (value === 'wash dishes') {
-                return;
-            }
-            console.log(index);
-            console.log(value);
-        });
+    /*
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function (value, index) {
+      if (value === 'wash dishes') {
+        return;
+      }
+      console.log(index);
+      console.log(value);
+    });
 
-        // Regular Function
-        const regularFunction = function(param, param2) {
-            console.log('regular hello')
-            return 5;
-        };
+    // Arrow function 
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach((value, index) => {
+      if (value === 'wash dishes') {
+        return;
+      }
+      console.log(index);
+      console.log(value);
+    });
 
-        // Arrow Function
-        const arrowFunction = (param, param2) => {
-            console.log('arrow hello');
-            return 5;
-        };
-        arrowFunction();
+    // Regular Function
+    const regularFunction = function (param, param2) {
+      console.log('regular hello')
+      return 5;
+    };
 
-        const oneParam = param => {
-            console.log(param + 1);
-        };
-        oneParam(2);
+    // Arrow Function
+    const arrowFunction = (param, param2) => {
+      console.log('arrow hello');
+      return 5;
+    };
+    arrowFunction();
 
-        const oneLine = () => 2 + 3;
-        console.log(oneLine());
+    const oneParam = param => {
+      console.log(param + 1);
+    };
+    oneParam(2);
 
-    </script>
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+    */
+
+    /*.filter() = filters out negative numbers*/
+    console.log([1, -3, 5].filter((value, index ) => {
+      /*if (value >= 0) {
+        return true;
+      } else {
+        return false;
+      }*/
+      return value >= 0;
+    }));
+
+    /*.map() = transform an array into another array.*/
+    console.log([1, 1, 3].map((value, index) => {
+      return value + 10;
+    }));
+
+    /*.map() = transform an array into another array. Compact version */
+    console.log([1, 1, 3].map(value => value + 10));
+
+  </script>
 </body>
 
 </html>

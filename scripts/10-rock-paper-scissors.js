@@ -1,81 +1,81 @@
 
 let score = JSON.parse(localStorage.getItem("score")) || {
-    wins: 0,
-    losses: 0,
-    ties: 0,
+  wins: 0,
+  losses: 0,
+  ties: 0,
 }; //converting string to object
 
 updateScoreElement();
 
 function playGame(playerMove) {
-    const computerMove = pickComputerMove();
+  const computerMove = pickComputerMove();
 
-    let result = "";
+  let result = "";
 
-    if (playerMove === "Scissors") {
-        if (computerMove === "Rock") {
-            result = "You Lose";
-        } else if (computerMove === "Paper") {
-            result = "You Win.";
-        } else if (computerMove === "Scissors") {
-            result = "Tie";
-        }
-    } else if (playerMove === "Paper") {
-        if (computerMove === "Rock") {
-            result = "You Win";
-        } else if (computerMove === "Paper") {
-            result = "Tie.";
-        } else if (computerMove === "Scissors") {
-            result = "You Lose";
-        }
-    } else if (playerMove === "Rock") {
-        if (computerMove === "Rock") {
-            result = "Tie";
-        } else if (computerMove === "Paper") {
-            result = "You Lose.";
-        } else if (computerMove === "Scissors") {
-            result = "You Win";
-        }
+  if (playerMove === "Scissors") {
+    if (computerMove === "Rock") {
+      result = "You Lose";
+    } else if (computerMove === "Paper") {
+      result = "You Win.";
+    } else if (computerMove === "Scissors") {
+      result = "Tie";
     }
-
-    if (result === "You Win") {
-        score.wins += 1;
-    } else if (result === "You Lose") {
-        score.losses += 1;
-    } else if (result === "Tie") {
-        score.tie += 1;
+  } else if (playerMove === "Paper") {
+    if (computerMove === "Rock") {
+      result = "You Win";
+    } else if (computerMove === "Paper") {
+      result = "Tie.";
+    } else if (computerMove === "Scissors") {
+      result = "You Lose";
     }
+  } else if (playerMove === "Rock") {
+    if (computerMove === "Rock") {
+      result = "Tie";
+    } else if (computerMove === "Paper") {
+      result = "You Lose.";
+    } else if (computerMove === "Scissors") {
+      result = "You Win";
+    }
+  }
 
-    localStorage.setItem("score", JSON.stringify(score)); // converting object to string
+  if (result === "You Win") {
+    score.wins += 1;
+  } else if (result === "You Lose") {
+    score.losses += 1;
+  } else if (result === "Tie") {
+    score.tie += 1;
+  }
 
-    updateScoreElement();
+  localStorage.setItem("score", JSON.stringify(score)); // converting object to string
 
-    document.querySelector(".js-result").innerHTML = result;
+  updateScoreElement();
 
-    document.querySelector(".js-moves").innerHTML = `You 
+  document.querySelector(".js-result").innerHTML = result;
+
+  document.querySelector(".js-moves").innerHTML = `You 
 <img src="images/${playerMove}-emoji.png" class="move-icon"> 
 <img src="images/${computerMove}-emoji.png" class="move-icon"> 
 Computer`;
 }
 
 function updateScoreElement() {
-    document.querySelector(
-        ".js-score"
-    ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+  document.querySelector(
+    ".js-score"
+  ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 }
 
 // use a verb/action for function name.
 function pickComputerMove() {
-    const randomNumber = Math.random();
+  const randomNumber = Math.random();
 
-    let computerMove = "";
+  let computerMove = "";
 
-    if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = "Rock";
-    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-        computerMove = "Paper";
-    } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-        computerMove = "Scissors";
-    }
-    return computerMove;
+  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    computerMove = "Rock";
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    computerMove = "Paper";
+  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+    computerMove = "Scissors";
+  }
+  return computerMove;
 }
